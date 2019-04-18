@@ -10,7 +10,7 @@ nvidia-docker run -it -p <remote_port>:<docker_port> -v /home/tsinghuaee76/OCR_e
 ```
 PyTorch组：
 ```shell
-nvidia-docker run -it -p <remote_port>:<docker_port> -v /home/tsinghuaee76/OCR_experiments/Datasets/Scene_Text:/Dataset pytorch/e2e-mlt
+nvidia-docker run -it -p <remote_port>:<docker_port> -v /home/tsinghuaee76/OCR_experiments/Datasets/Scene_Text:/workspace/Dataset pytorch/e2e-mlt
 ```
 参数说明:
 * <remote_port>: 计算结点中的某个未被占用端口，如果端口已被占用会提示"port is already allocated"
