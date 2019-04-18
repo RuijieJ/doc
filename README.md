@@ -85,10 +85,9 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 * 目标主机：计算节点ip地址，计算节点c4130-015的ip为10.20.101.35；计算节点c4130-016的ip为10.20.101.36
 * 目标端口：与2中的<remote_port>相同
 
-第四步，使用该新建会话进行连接
-
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/xshell3.png)
 
+第四步，使用该新建会话进行连接
 
 ### 6. 在自己的电脑上打开Jupyter
 打开浏览器，进入地址localhost:<local_port>，即可在该页面查看和修改Docker容器中的文件，其中<local_port>与5中的<local_port>相同。
