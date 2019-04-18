@@ -29,7 +29,7 @@ tmux
 ```
 
 ### 4. 安装和运行Jupyter
-第一次使用时需要先安装Jupyter，大约需要3分钟
+第一次使用时需要先安装Jupyter，视网速情况需要3到10分钟不等
 ```shell
 pip install jupyter
 ```
@@ -57,8 +57,11 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/3.png)
 
 ### 6. 在自己的电脑上打开Jupyter
-打开浏览器，进入地址localhost:<local_port>，即可在该页面查看Docker容器中的文件，其中<local_port>与5中的<local_port>相同。
+打开浏览器，进入地址localhost:<local_port>，即可在该页面查看和修改Docker容器中的文件，其中<local_port>与5中的<local_port>相同。
 第一次登录需要在"Password or token"栏中输入4中记录的token，点击"Log in"。
 
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/5.png)
+
+### 7. 注意事项
+再次提醒大家不要修改任何从tsinghuaee76账号下挂载到容器中的文件，即不要修改/workspace/Dataset/中的任何文件。
 
