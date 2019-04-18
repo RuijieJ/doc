@@ -44,6 +44,8 @@ jupyter notebook --no-browser --port=<docker_port> --ip=0.0.0.0 --allow-root
 请记录下最后一行的token号，之后会用到。
 
 ### 5. 新开一个ssh窗口，连接容器
+
+# 使用mobaXterm连接时
 使用mobaXterm时，点击窗口栏的"+"号，新打开一个本地窗口，然后输入
 ```shell
 ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsinghuaee<XX>@<node_ip>
@@ -58,6 +60,35 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 * <node_ip>：计算节点c4130-015的<node_ip>为10.20.101.35；计算节点c4130-016的<node_ip>为10.20.101.36
 
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/3.png)
+
+# 使用Xshell连接时
+使用Xshell时，首先新建一个会话
+第一步，设置 连接 参数：
+* 协议： 设置为ssh
+* 主机：计算节点ip地址，计算节点c4130-015的ip为10.20.101.35；计算节点c4130-016的ip为10.20.101.36
+* 端口：固定为11100
+
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/xshell1.png)
+
+第二步，设置 连接-用户身份验证 参数：
+* 用户名：自己的服务器账号
+* 密码：自己的服务器密码
+
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/xshell2.png)
+
+第三步，通过设置 SSH-隧道 添加端口侦听：
+（1）在 TCP/IP转移 中，点击 添加 按钮
+
+（2）设置 转移规则：
+* 源主机：设置为localhost，即本机
+* 侦听端口：自己的电脑上任意未被占用的端口，自定义
+* 目标主机：计算节点ip地址，计算节点c4130-015的ip为10.20.101.35；计算节点c4130-016的ip为10.20.101.36
+* 目标端口：与2中的<remote_port>相同
+
+第四步，使用该新建会话进行连接
+
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/xshell3.png)
+
 
 ### 6. 在自己的电脑上打开Jupyter
 打开浏览器，进入地址localhost:<local_port>，即可在该页面查看和修改Docker容器中的文件，其中<local_port>与5中的<local_port>相同。
