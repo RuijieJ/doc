@@ -1,7 +1,7 @@
 ## 在Docker容器中使用Jupyter
-由于Docker容器没有图形界面，难以查看其中的图片，同时不习惯使用vim的同学对编辑器中的文档和代码也有困难。Jupyter可以用自己的电脑远程连接Docker容器，为其提供图形界面。
+由于Docker容器没有图形界面，难以查看其中的图片，同时不习惯使用vim的同学对编辑器中的文档和代码也有困难。Jupyter可以用自己的电脑远程连接Docker容器，为其提供图形界面。**本文档初稿由林东生同学完成。**
 
-### 1. 按照操作指南中的步骤登录天津院服务器，并连接计算节点
+### 1. 按照操作指南中的步骤登录服务器，并连接计算节点
 
 ### 2. 打开容器，并绑定计算结点的某端口和容器的某端口
 TensorFlow组：
@@ -38,7 +38,7 @@ pip install jupyter
 jupyter notebook --no-browser --port=<docker_port> --ip=0.0.0.0 --allow-root
 ```
 参数说明：
-* <docker_port>和1中的<docker_port>一致
+* <docker_port>和2中的<docker_port>一致
 
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/2.png)
 请记录下最后一行的token号，之后会用到。
@@ -49,7 +49,7 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 ```
 参数说明：
 * <local_port>：自己的电脑上任意未被占用的端口，自定义
-* <remote_port>: 与1中的<remote_port>相同
+* <remote_port>: 与2中的<remote_port>相同
 * <ssh_port>: 固定为11100
 * tsinghuaee<XX>：自己的服务器账号
 * <node_ip>：计算节点c4130-015的<node_ip>为10.20.101.35；计算节点c4130-016的<node_ip>为10.20.101.36
@@ -62,6 +62,21 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/5.png)
 
-### 7. 注意事项
-再次提醒大家不要修改任何从tsinghuaee76账号下挂载到容器中的文件，即不要修改Dataset/文件夹中的任何文件。
+### 7. 其他事项
+(1) 当完成第2步之后，访问服务器的<remote_port>端口就相当于访问Docker容器的<docker_port>端口。例如，当我们在容器中保存了TensorFlow记录文件并想用TensorBoard进行可视化，可以在容器中输入
+```shell
+tensorboad –logdir=<log_path> –p <docker_port>
+```
+然后，在自己的电脑上打开浏览器，网址输入
+```shell
+<node_ip>:<remote_port>
+```
+即可打开TensorBoard页面。
+参数说明：
+* <log_path>: TensorFlow的summary文件所在文件夹
+* <remote_port>: 与2中的<remote_port>相同
+* <docker_port>: 与2中的<docker_port>相同
+* <node_ip>: 与5中<node_ip>相同
+
+(2) 再次提醒大家不要修改任何从tsinghuaee76账号下挂载到容器中的文件，即不要修改Dataset/文件夹中的任何文件。
 
