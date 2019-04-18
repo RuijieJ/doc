@@ -77,6 +77,7 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/xshell2.png)
 
 第三步，通过设置 SSH-隧道 添加端口侦听：
+
 （1）在 TCP/IP转移 中，点击 添加 按钮
 
 （2）设置 转移规则：
