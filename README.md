@@ -16,7 +16,7 @@ nvidia-docker run -it -p <remote_port>:<docker_port> -v /home/tsinghuaee76/OCR_e
 * <remote_port>: 计算结点中的某个未被占用端口，如果端口已被占用会提示"port is already allocated"
 * <docker_port>：容器中某个端口，自定义
 
-![image](https://github.com/RuijieJ/doc/tree/master/imgs/1.jpg)
+![image](https://github.com/RuijieJ/doc/tree/master/imgs/1.png)
 
 ### 3. 用tmux打开一个会话
 ```shell
@@ -40,7 +40,7 @@ jupyter notebook --no-browser --port=<docker_port> --ip=0.0.0.0 --allow-root
 参数说明：
 * <docker_port>和1中的<docker_port>一致
 
-![image](https://github.com/RuijieJ/doc/tree/master/imgs/2.jpg)
+![image](https://github.com/RuijieJ/doc/tree/master/imgs/2.png)
 
 ### 5. 新开一个ssh窗口，连接容器
 ```shell
@@ -53,11 +53,11 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 * tsinghuaee<XX>：自己的服务器账号
 * <node_ip>：计算节点c4130-015的<node_ip>为10.20.101.35；计算节点c4130-016的<node_ip>为10.20.101.36
 
-![image](https://github.com/RuijieJ/doc/tree/master/imgs/3.jpg)
+![image](https://github.com/RuijieJ/doc/tree/master/imgs/3.png)
 
 ### 6. 在自己的电脑上打开Jupyter
 打开浏览器，进入地址localhost:<local_port>，即可在该页面查看Docker容器中的文件，其中<local_port>与5中的<local_port>相同。
 第一次登录需要在"Password or token"栏中输入4中记录的token，点击"Log in"。
 
-![image](https://github.com/RuijieJ/doc/tree/master/imgs/5.jpg)
+![image](https://github.com/RuijieJ/doc/tree/master/imgs/5.png)
 
