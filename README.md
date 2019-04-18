@@ -50,8 +50,6 @@ jupyter notebook --no-browser --port=<docker_port> --ip=0.0.0.0 --allow-root
 ```shell
 ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsinghuaee<XX>@<node_ip>
 ```
-使用XShell时，=====TO EDIT=====
-
 参数说明：
 * <local_port>：自己的电脑上任意未被占用的端口，自定义
 * <remote_port>: 与2中的<remote_port>相同
