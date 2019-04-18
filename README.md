@@ -45,7 +45,7 @@ jupyter notebook --no-browser --port=<docker_port> --ip=0.0.0.0 --allow-root
 
 ### 5. 新开一个ssh窗口，连接容器
 
-# 使用mobaXterm连接时
+#### 使用mobaXterm连接时
 使用mobaXterm时，点击窗口栏的"+"号，新打开一个本地窗口，然后输入
 ```shell
 ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsinghuaee<XX>@<node_ip>
@@ -61,7 +61,7 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/3.png)
 
-# 使用Xshell连接时
+#### 使用Xshell连接时
 使用Xshell时，首先新建一个会话
 第一步，设置 连接 参数：
 * 协议： 设置为ssh
