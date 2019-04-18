@@ -63,5 +63,5 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> -p <ssh_port> tsingh
 ![image](https://github.com/RuijieJ/doc/blob/master/imgs/5.png)
 
 ### 7. 注意事项
-再次提醒大家不要修改任何从tsinghuaee76账号下挂载到容器中的文件，即不要修改/workspace/Dataset/中的任何文件。
+再次提醒大家不要修改任何从tsinghuaee76账号下挂载到容器中的文件，即不要修改Dataset/文件夹中的任何文件。
 
