@@ -24,7 +24,7 @@ jupyter notebook --no-browser --port=<remote_port> --ip=0.0.0.0 --allow-root
 
 例如：
 
-![image](https://github.com/RuijieJ/doc/blob/master/imgs/1.png)
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/new1.png)
 请记录下最后一行的token号（上例中为d4db1e2dd86e165d40b49a7ffca28ac39f184723af640354），之后会用到。
 
 ### 5. 新开一个ssh窗口，连接计算节点
@@ -49,7 +49,7 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> tsinghuaee<XX>@<node
   c4130-020的<node_ip>为10.20.101.40
 
 例如：
-![image](https://github.com/RuijieJ/doc/blob/master/imgs/2.png)
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/new2.png)
 
 #### 使用Xshell连接时
 使用Xshell时，首先新建一个会话
@@ -91,11 +91,11 @@ ssh -N -f -L localhost:<local_port>:localhost:<remote_port> tsinghuaee<XX>@<node
 ### 6. 在自己的电脑上打开Jupyter
 打开浏览器，进入地址localhost:<local_port>，即可在该页面查看和修改服务器中的文件，其中<local_port>与5中的<local_port>相同。
 例如，按照上述例子，在本里浏览器中输入localhost:2333，即可进入如下页面：
-![image](https://github.com/RuijieJ/doc/blob/master/imgs/3.png)
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/new3.png)
 
 在"Password or token"栏中输入4中记录的token，点击"Log in"。也可以在下方设置新的密码。
 
 可进入如下页面开始管理你的服务器文件和运行程序：
-![image](https://github.com/RuijieJ/doc/blob/master/imgs/4.png)
+![image](https://github.com/RuijieJ/doc/blob/master/imgs/new4.png)
 
 
